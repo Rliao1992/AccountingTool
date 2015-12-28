@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Accounting Tool Cost Sample</title>
+<script src="../apiJS_v1/accountingTool.js"></script>
+<style>
+</style>
+</head>
+
+<body>
+<script>
+
+window.onload = function(){
+	
+	var aOne = 2000;
+	
+	var aTwo = 3000;
+	
+	accountingTool.COSTS.costsDetermine("Gasoline for the lawnmowers",8200,aOne,12300,aTwo);
+	
+	accountingTool.COSTS.costsDetermine("Salary to the owner",5000,aOne,5000,aTwo);
+	
+	accountingTool.COSTS.costsDetermine("Wages paid to lawn cutters",24000,aOne,36000,aTwo);
+	
+	accountingTool.COSTS.costsDetermine("Costs paid for fertilizer",3000,aOne,4500,aTwo);
+	
+	accountingTool.COSTS.costsDetermine("Depreciation on lawn equipment",800,aOne,800,aTwo);
+	
+	accountingTool.COSTS.costsDetermine("General business insurance",70,aOne,70,aTwo);
+	
+	accountingTool.COSTS.costsDetermine("Advertising in the daily paper",160,aOne,160,aTwo);
+	
+	accountingTool.COSTS.costsDetermine("Gasoline for 7 trucks used",30800,aOne,41300,aTwo);
+	
+	accountingTool.COSTS.costsDetermine("Maintenance on lawn equpment",780,aOne,900,aTwo);
+
+	accountingTool.COSTS.costsDetermine("Cell phone bill",99,aOne,99,aTwo);
+	
+	accountingTool.COSTS.costsDetermine("Twine for the weed-eaters",120,aOne,180,aTwo);
+
+
+	
+	
+	
+	//for getting Variable, Fixed and Mixed cost
+	
+	
+	
+	for (var i =0; i < accountingTool.COSTS.variableCost.Result.CostTitle.length; i++){
+		
+		var title =  accountingTool.COSTS.variableCost.Result.CostTitle[i];
+		
+		document.write(title + " (" + accountingTool.COSTS.variableCost.Category + ")<br/><br/>");
+	}
+	
+	for (var i =0; i < accountingTool.COSTS.fixedCost.Result.CostTitle.length; i++){
+		
+		var title =  accountingTool.COSTS.fixedCost.Result.CostTitle[i];
+		
+		document.write(title + " (" + accountingTool.COSTS.fixedCost.Category + ")<br/><br/>");
+	}
+	
+	for (var i =0; i < accountingTool.COSTS.mixedCost.Result.CostTitle.length; i++){
+		
+		var title =  accountingTool.COSTS.mixedCost.Result.CostTitle[i];
+		
+		document.write(title + " (" + accountingTool.COSTS.mixedCost.Category + ")<br/><br/>");
+	}
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
